@@ -2,21 +2,14 @@
 #include <sourcemod>
 #include <cURL>
 
-#define USE_THREAD    1
-#define USE_PROFILER    0
+#define MDBAVERSION "1.0.0"
 
-#if USE_PROFILER
-  #include <profiler>
-#endif
-
-#define MDBAVERSION "1.0.0-dev"
-
-#define ADMINLIST_FILE "configs/admins.cfg.mdb"
+#define ADMINLIST_FILE "configs/admins.cfg"
 #define ADMINLIST_TEMP_FILE "configs/admins.cfg.tmp"
 
 // Define some max string sizes
-#define APIKEY_SIZE 33 // 32 + null
-#define APISECRET_SIZE 33 // 32 + null
+#define APIKEY_SIZE 33
+#define APISECRET_SIZE 33
 
 // API ENDPOINTS
 #define MDB_URL_ADMINS        "http://api.mitchdb.net/api/v2/admins"
@@ -31,9 +24,7 @@ public Plugin:myinfo =
 };
 
 new CURL_Default_opt[][2] = {
-#if USE_THREAD
   {_:CURLOPT_NOSIGNAL,1},
-#endif
   {_:CURLOPT_NOPROGRESS,1},
   {_:CURLOPT_TIMEOUT,40},
   {_:CURLOPT_CONNECTTIMEOUT,30},
