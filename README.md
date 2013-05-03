@@ -23,6 +23,7 @@ This plugin requires the following console variables to be specified:
 
 ### Admin Commands
 * `mdb_reloadadmins` - This reloads the admin list. The new admin list is downloaded from MitchDB and then copied over the SourceMod admins.cfg file.
+* `mdb_reloadadmingroups` - This reloads the admin group list. The new admin group list is downloaded from MitchDB and then copied over the SourceMod admin_groups.cfg file.
 
 ## Help & Support
 If you have trouble with this plugin, please contact MitchDB support. If you find bugs/issues with this plugin, feel free to [submit an issue](https://github.com/mitchdb/mitchdb-admin-manager/issues) to the GitHub issue tracker.
